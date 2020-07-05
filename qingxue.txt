@@ -1,3 +1,6 @@
-晴雪
-江
-111111111
+git status	获取状态
+git log	获取日志
+git reflog  获得版本号
+git reset --hard HEAD^ 回退上一个版本
+git reset --hard 21adb1e 版本回退 （回退指定版本）
+
