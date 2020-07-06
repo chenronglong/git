@@ -12,11 +12,11 @@ git checkout --qingxue.txt 丢弃工作区的修改
 git remote add origin https://github.com/chenronglong/git.git  本地仓库和远程仓库联系起来
 git push -u origin master 把当前分支master推送到远程
 
-
+git branch name 创建分支
 git checkout -b dev 创建并切换分支
 git checkout master 切换到master分支
 git branch 查看当前的分支
 
 git merge dev 在master分支上合并dev分支内容
-
+git branch -d dev 删除dev分支
 
