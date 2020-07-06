@@ -25,3 +25,33 @@ git branch -d dev 删除dev分支
 =======
 2222222		dev分支上的内容
 >>>>>>> dev	
+
+
+git merge --no-ff -m 'merge with no-ff' dev 合并dev分支 --no-ff 表示禁用 （禁用后就可以看到删除分支的版本号） fast forward “快进模式”也就是直接把master指向dev的当前提交，所以合并速度非常快。
+
+ git log --graph --pretty=oneline --abbrev-commit  以图表形式、版本号 展示
+
+*   ed8c909 (HEAD -> master) 解决冲突
+|\
+| * 80aacb3 (dev) 制造冲突
+* | bb50782 制造冲突
+|/
+* c7eefb5 git branch -d dev
+*   dcd43da 分支
+|\
+| * a97c00c dev分支
+| * dd4adb4 1111
+* | a45fa33 master分支增加内容
+|/
+*   7a12e87 (origin/master) 解决冲突
+|\
+| * a3d91f1 git checkout -- file
+* | 2d0fb98 rm j.txt
+|/
+* eb69c17 git diff
+* a3003cd 修改整体内容
+* 21adb1e 新增2222
+* 6be8fec 修改文件
+
+分支策略：首先master主分支应该是非常稳定的，也就是用来发布新版本，一般情况下不允许在上面干活，干活一般情况下在新建的dev分支上干活，干完后，比如上要发布，或者说dev分支代码稳定后可以合并到主分支master上来。
+
