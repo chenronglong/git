@@ -8,3 +8,10 @@ git diff 查看文件差异
 rm j.txt 删除文件
 git checkout --qingxue.txt 丢弃工作区的修改
 
+
+git remote add origin https://github.com/chenronglong/git.git  本地仓库和远程仓库联系起来
+git push -u origin master 把当前分支master推送到远程
+
+git checkout -b dev 创建并切换分支
+git branch 查看当前的分支
+1111
